@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AURA | High-End Interior Design</title>
+    <meta name="description" content="Designing Timeless Spaces. AURA is a high-end luxury interior design studio targeting elite clients.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lenis CSS for smooth scrolling baseline -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.0.45/dist/lenis.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="loading">
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <h1 class="brand-logo">AURA</h1>
+            <div class="progress-bar"><div class="progress"></div></div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <nav class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="icon">☾</span>
+                </button>
+                <a href="contact.html" class="btn btn-outline">Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section with 3D Background -->
+        <section class="hero">
+            <div class="hero-canvas-container" id="hero-canvas"></div>
+            <div class="hero-content">
+                <p class="hero-subtitle">Elevating Lifestyles</p>
+                <h1 class="hero-title">Designing<br>Timeless<br>Spaces</h1>
+                <div class="hero-scroll-indicator">
+                    <span>Scroll to explore</span>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Preview Section -->
+        <section class="about-preview section-padding">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="about-text" data-scroll>
+                        <h2 class="section-title">A Symphony of Form and Function.</h2>
+                        <p>At AURA, we believe that true luxury lies in the details. We craft bespoke interior environments that transcend trends, offering our elite clientele spaces that are as uniquely breathtaking as they are profoundly livable.</p>
+                        <a href="about.html" class="link-arrow">Discover Our Story <span class="arrow">→</span></a>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80" alt="Luxury Interior" class="parallax-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section class="featured-projects section-padding dark-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title text-light">Signature Works</h2>
+                    <a href="portfolio.html" class="link-arrow text-light">View All Projects <span class="arrow">→</span></a>
+                </div>
+                
+                <div class="projects-carousel">
+                    <!-- Project 1 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80" alt="The Glass Villa">
+                        </div>
+                        <div class="project-info">
+                            <h3>The Glass Villa</h3>
+                            <p>Residential · Beverly Hills</p>
+                        </div>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card">
+                        <div class="project-image-container">
+                            <img src="https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=80" alt="Penthouse 42">
+                        </div>
+                        <div class="project-info">
+                            <h3>Penthouse 42</h3>
+                            <p>Luxury Apartment · Manhattan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Preview Section -->
+        <section class="services-preview section-padding">
+            <div class="container">
+                <h2 class="section-title text-center">Bespoke Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">🏛</div>
+                        <h3>Residential Design</h3>
+                        <p>Curating intimate, ultra-luxurious living spaces tailored to your personal aesthetic.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🏢</div>
+                        <h3>Commercial Design</h3>
+                        <p>Elevating brand presence through sophisticated, impactful commercial environments.</p>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📐</div>
+                        <h3>3D Visualization</h3>
+                        <p>Immersive, photorealistic renderings to visualize perfection before construction begins.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="logo">AURA</h2>
+                    <p>Designing Timeless Spaces for the Elite.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Studio</h4>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="services.html">Services</a>
+                    </div>
+                    <div class="link-group">
+                        <h4>Social</h4>
+                        <a href="#" target="_blank">Instagram</a>
+                        <a href="#" target="_blank">Pinterest</a>
+                        <a href="#" target="_blank">LinkedIn</a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Inspired</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 AURA Interior Design. All rights reserved.</p>
+                <div class="legal-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    
+    <!-- Three.js CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="js/main.js"></script>
+    <script src="js/three-scene.js"></script>
+</body>
+</html>

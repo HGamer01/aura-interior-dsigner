@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journal | AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.0.45/dist/lenis.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+        @media (max-width: 1024px) {
+            .blog-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-sm);
+        }
+        .blog-image {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 4px;
+            transition: transform 0.4s ease;
+        }
+        .blog-card:hover .blog-image {
+            transform: scale(1.02);
+        }
+        .blog-date {
+            font-size: 0.875rem;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        .blog-title {
+            font-size: 1.5rem;
+            font-family: var(--font-serif);
+        }
+        .blog-excerpt {
+            color: var(--text-secondary);
+            font-size: 1rem;
+            margin-bottom: var(--space-sm);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle"><span class="icon">☾</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center">
+                    <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 6rem);">The Journal</h1>
+                    <p class="hero-subtitle" style="margin-top: 1rem;">Insights & Inspiration</p>
+                </div>
+                
+                <div class="blog-grid">
+                    <article class="blog-card" data-scroll>
+                        <div style="overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80" alt="Blog" class="blog-image">
+                        </div>
+                        <span class="blog-date">Oct 12, 2026</span>
+                        <h3 class="blog-title">The Return of Organic Modernism</h3>
+                        <p class="blog-excerpt">Exploring how natural materials and fluid shapes are redefining luxury interiors this season.</p>
+                        <a href="#" class="link-arrow">Read Article <span class="arrow">→</span></a>
+                    </article>
+
+                    <article class="blog-card" data-scroll>
+                        <div style="overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80" alt="Blog" class="blog-image">
+                        </div>
+                        <span class="blog-date">Sep 28, 2026</span>
+                        <h3 class="blog-title">Mastering Lighting Design</h3>
+                        <p class="blog-excerpt">Why architectural lighting is the unseen hero of spatial perception and emotional resonance.</p>
+                        <a href="#" class="link-arrow">Read Article <span class="arrow">→</span></a>
+                    </article>
+
+                    <article class="blog-card" data-scroll>
+                        <div style="overflow: hidden;">
+                            <img src="https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=80" alt="Blog" class="blog-image">
+                        </div>
+                        <span class="blog-date">Sep 15, 2026</span>
+                        <h3 class="blog-title">Designing for Art Collectors</h3>
+                        <p class="blog-excerpt">Creating environments that honor world-class collections without feeling like sterile galleries.</p>
+                        <a href="#" class="link-arrow">Read Article <span class="arrow">→</span></a>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 AURA Interior Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

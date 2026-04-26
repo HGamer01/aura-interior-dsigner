@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.0.45/dist/lenis.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-xl);
+            margin-top: var(--space-lg);
+        }
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+        }
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+        }
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .form-group label {
+            font-family: var(--font-sans);
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 0.5rem;
+            color: var(--text-secondary);
+        }
+        .form-group input, .form-group textarea {
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            padding: 0.5rem 0;
+            color: var(--text-primary);
+            font-family: var(--font-sans);
+            font-size: 1.125rem;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .form-group input:focus, .form-group textarea:focus {
+            border-bottom-color: var(--accent);
+        }
+        .btn-submit {
+            align-self: flex-start;
+            background: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--text-primary);
+            padding: 1rem 3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            cursor: none;
+            transition: all 0.3s ease;
+        }
+        .btn-submit:hover {
+            background: var(--text-primary);
+            color: var(--bg-primary);
+        }
+        .contact-info p {
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 300px;
+            border: none;
+            filter: grayscale(100%) invert(90%) contrast(1.2);
+            margin-top: var(--space-md);
+        }
+        [data-theme="dark"] .map-container iframe {
+            filter: grayscale(100%) invert(10%) contrast(1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html" class="active">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle"><span class="icon">☾</span></button>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section-padding">
+            <div class="container">
+                <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 6rem);">Get in Touch</h1>
+                <p class="hero-subtitle" style="margin-top: 1rem;">Let's Discuss Your Vision</p>
+
+                <div class="contact-grid">
+                    <div>
+                        <form class="contact-form">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Project Details</label>
+                                <textarea rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn-submit">Send Inquiry</button>
+                        </form>
+                    </div>
+                    <div class="contact-info">
+                        <h3 class="section-title" style="font-size: 2rem;">Our Studio</h3>
+                        <p>123 Luxury Avenue<br>Beverly Hills, CA 90210</p>
+                        <p>hello@auradesign.com<br>+1 (310) 555-0198</p>
+                        <div class="map-container">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3304.757827878694!2d-118.40381668478426!3d34.07572718059942!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bc04d6d147ab%3A0xd6c7c379fd081ed1!2sBeverly%20Hills%2C%20CA%2090210!5e0!3m2!1sen!2sus!4v1655000000000!5m2!1sen!2sus" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom" style="border: none; padding-top: 0;">
+                <p>&copy; 2026 AURA Interior Design.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

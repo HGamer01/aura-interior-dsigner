@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | AURA</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    
+    <!-- Lenis CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.0.45/dist/lenis.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Navigation -->
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle">
+                    <span class="icon">☾</span>
+                </button>
+                <a href="contact.html" class="btn btn-outline">Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: var(--space-xl);">
+                    <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 6rem);">Our Legacy</h1>
+                    <p class="hero-subtitle">Redefining Luxury Interiors</p>
+                </div>
+                
+                <div class="grid-2">
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80" alt="Studio" class="parallax-image">
+                    </div>
+                    <div class="about-text" data-scroll>
+                        <h2 class="section-title">The Art of Living.</h2>
+                        <p>Founded in 2010, AURA emerged from a singular vision: to create spaces that resonate with the soul. We approach every project not just as a design challenge, but as an opportunity to craft a masterpiece.</p>
+                        <p>Our multidisciplinary team of architects, designers, and artisans collaborate seamlessly to deliver environments that are technically flawless and aesthetically profound.</p>
+                    </div>
+                </div>
+                
+                <div class="grid-2" style="margin-top: var(--space-xl);">
+                    <div class="about-text" data-scroll>
+                        <h2 class="section-title">Award-Winning Excellence.</h2>
+                        <p>With features in Architectural Digest, Vogue Living, and Elle Decor, our portfolio speaks to a relentless pursuit of perfection. We source the rarest materials, collaborate with the finest craftsmen, and push the boundaries of spatial design.</p>
+                    </div>
+                    <div class="about-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&q=80" alt="Details" class="parallax-image">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="logo">AURA</h2>
+                    <p>Designing Timeless Spaces for the Elite.</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Studio</h4>
+                        <a href="about.html">About</a>
+                        <a href="portfolio.html">Portfolio</a>
+                        <a href="services.html">Services</a>
+                    </div>
+                </div>
+                <div class="footer-newsletter">
+                    <h4>Stay Inspired</h4>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your Email Address" required>
+                        <button type="submit">→</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- GSAP & Lenis CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

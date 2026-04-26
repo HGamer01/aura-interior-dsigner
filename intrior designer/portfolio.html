@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | AURA</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/lenis@1.0.45/dist/lenis.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .portfolio-grid {
+            column-count: 2;
+            column-gap: var(--space-md);
+            margin-top: var(--space-xl);
+        }
+        @media (max-width: 768px) {
+            .portfolio-grid { column-count: 1; }
+        }
+        .portfolio-item {
+            break-inside: avoid;
+            margin-bottom: var(--space-md);
+            position: relative;
+            cursor: none;
+            overflow: hidden;
+        }
+        .portfolio-item img {
+            width: 100%;
+            display: block;
+            transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .portfolio-overlay {
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            background: linear-gradient(to top, rgba(10,10,10,0.9), transparent);
+            padding: var(--space-md);
+            color: var(--clr-white);
+            transform: translateY(100%);
+            transition: transform 0.4s ease;
+        }
+        .portfolio-item:hover img { transform: scale(1.05); }
+        .portfolio-item:hover .portfolio-overlay { transform: translateY(0); }
+    </style>
+</head>
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <header class="header scrolled">
+        <div class="nav-container">
+            <a href="index.html" class="logo">AURA</a>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle"><span class="icon">☾</span></button>
+                <a href="contact.html" class="btn btn-outline">Consultation</a>
+            </div>
+        </div>
+    </header>
+
+    <main style="padding-top: 120px;">
+        <section class="section-padding">
+            <div class="container text-center">
+                <h1 class="hero-title" style="font-size: clamp(3rem, 6vw, 6rem);">Selected Works</h1>
+                <p class="hero-subtitle" style="margin-top: 1rem;">Our Proudest Creations</p>
+                
+                <div class="portfolio-grid">
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&q=80" alt="Villa">
+                        <div class="portfolio-overlay">
+                            <h3>The Glass Villa</h3>
+                            <p>Beverly Hills</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80" alt="Apartment">
+                        <div class="portfolio-overlay">
+                            <h3>Urban Minimalist</h3>
+                            <p>London</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80" alt="Living Room">
+                        <div class="portfolio-overlay">
+                            <h3>Oceanside Estate</h3>
+                            <p>Malibu</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-item">
+                        <img src="https://images.unsplash.com/photo-1600607687644-aac4c15cecb1?auto=format&fit=crop&q=80" alt="Penthouse">
+                        <div class="portfolio-overlay">
+                            <h3>Penthouse 42</h3>
+                            <p>Manhattan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <h2 class="logo">AURA</h2>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.0.45/dist/lenis.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

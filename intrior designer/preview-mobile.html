@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Preview | AURA</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1a1a1a;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            font-family: 'Inter', sans-serif;
+            color: #fff;
+        }
+        .preview-header {
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        .preview-header h1 {
+            font-size: 1.5rem;
+            margin: 0 0 0.5rem 0;
+            font-weight: 500;
+        }
+        .preview-header p {
+            color: #888;
+            margin: 0;
+            font-size: 0.875rem;
+        }
+        
+        /* Mobile Device Frame */
+        .device-frame {
+            position: relative;
+            width: 375px; /* iPhone width */
+            height: 812px; /* iPhone height */
+            background-color: #000;
+            border-radius: 40px;
+            box-shadow: 
+                0 0 0 12px #2a2a2a,
+                0 0 0 14px #4a4a4a,
+                0 20px 50px rgba(0,0,0,0.5);
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        /* Dynamic Island / Notch */
+        .device-notch {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 150px;
+            height: 30px;
+            background-color: #000;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            z-index: 10;
+        }
+
+        /* iFrame taking up the screen */
+        .device-screen {
+            width: 100%;
+            height: 100%;
+            border: none;
+            background-color: #fff;
+            border-radius: 35px;
+            overflow: hidden;
+        }
+        
+        /* Controls */
+        .controls {
+            margin-top: 2rem;
+            display: flex;
+            gap: 1rem;
+        }
+        .btn {
+            background-color: #333;
+            color: white;
+            border: none;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.875rem;
+            transition: background 0.2s;
+        }
+        .btn:hover {
+            background-color: #555;
+        }
+        .btn.active {
+            background-color: #d4af37;
+            color: #000;
+        }
+
+        @media (max-height: 900px) {
+            .device-frame {
+                transform: scale(0.8);
+            }
+        }
+        @media (max-height: 700px) {
+            .device-frame {
+                transform: scale(0.65);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="preview-header">
+        <h1>Mobile Experience Preview</h1>
+        <p>Interact with the AURA website inside an iOS device frame.</p>
+    </div>
+
+    <div class="device-frame" id="device">
+        <div class="device-notch"></div>
+        <iframe src="index.html" class="device-screen" id="preview-frame"></iframe>
+    </div>
+
+    <div class="controls">
+        <button class="btn" onclick="document.getElementById('preview-frame').src='index.html'">Home</button>
+        <button class="btn" onclick="document.getElementById('preview-frame').src='portfolio.html'">Portfolio</button>
+        <button class="btn" onclick="document.getElementById('preview-frame').src='project-details.html'">Project</button>
+    </div>
+
+</body>
+</html>
